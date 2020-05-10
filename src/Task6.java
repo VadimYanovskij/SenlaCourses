@@ -89,7 +89,7 @@ class Backpack {
 
     List<Item> bestItems = null;
 
-    private double maxWeight;
+    private final double maxWeight;
     private double bestPrice;
     private double bestWeight;
 
