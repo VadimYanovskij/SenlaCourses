@@ -7,9 +7,19 @@ import java.util.Scanner;
 public class Task5 {
     public static void main(String[] args) {
         boolean isPalin = false;
+        int n = 0;
         Scanner in = new Scanner(System.in);
-        System.out.print("Введите длину последовательности N: ");
-        int n = in.nextInt();
+        do {
+            try {
+                System.out.print("Введите длину последовательности N (не больше 100): ");
+                n = in.nextInt();
+                if (n > 100 || n < 0)
+                    System.out.println("Недопустимое значение N");
+            } catch (Exception e) {
+                System.out.println("Введённые данные не являются целым числом");
+                in.nextLine();
+                }
+        } while (n > 100 || n < 1);
         System.out.println("Числа-палиндромы в последовательности от 1 до " + n + ":");
         for (int i = 10; i <= n; i++) {
             if (Integer.toString(i).equals(new StringBuilder().append(i).reverse().toString())){
@@ -17,7 +27,7 @@ public class Task5 {
                 System.out.println(i);
             }
         }
-        if (isPalin == false) {
+        if (!isPalin) {
             System.out.println("В последовательности чисел от 1 до " + n + " нет чисел-палиндромов!");
         }
 

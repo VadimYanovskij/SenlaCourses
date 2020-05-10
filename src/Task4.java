@@ -12,7 +12,7 @@ public class Task4 {
         String str = in.nextLine();
         String[] wordsArray = str.toLowerCase().replaceAll("[,.!:?]", "").split("\\s");
         System.out.print("Введите слово для поиска: ");
-        String word = in.nextLine().trim().toLowerCase();
+        String word = in.next().trim().toLowerCase();
         for (int i = 0; i <= wordsArray.length-1; i++) {
             if (wordsArray[i].equals(word)) {
                 count++;

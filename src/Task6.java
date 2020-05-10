@@ -101,7 +101,7 @@ class Backpack {
         return bestWeight;
     }
 
-    //вычисляет общий вес набора предметов
+    //общий вес набора предметов
     private double calcWeight(List<Item> items) {
         double result = 0;
         for (Item item : items) {
@@ -110,7 +110,7 @@ class Backpack {
         return result;
     }
 
-    // вычисляет общую стоимость набора предметов
+    //общая стоимость набора предметов
     private double calcPrice(List<Item> items) {
         double result = 0;
         for (Item item : items) {
@@ -119,7 +119,7 @@ class Backpack {
         return result;
     }
 
-    //проверка, является ли данный набор лучшим решением задачи
+    //проверка - является ли данный набор лучшим решением задачи
     private void checkSet(List<Item> items) {
         if (this.bestItems == null) {
             if (this.calcWeight(items) <= this.maxWeight) {
