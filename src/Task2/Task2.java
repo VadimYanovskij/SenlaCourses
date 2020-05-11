@@ -1,3 +1,4 @@
+package Task2;
 //Создать программу, которая будет вычислять и выводить на экран НОК
 //(наименьшее общее кратное) и НОД (наибольший общий делитель) двух целых чисел,
 //введенных пользователем.
@@ -8,7 +9,7 @@ import java.util.Scanner;
 
 public class Task2 {
     public static void main(String[] args) {
-        Boolean notOK = true;
+        boolean notOK = true;
         Scanner in = new Scanner(System.in);
         do {
             try {
